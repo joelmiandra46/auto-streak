@@ -1,0 +1,23 @@
+name: Keep Streak Alive
+
+on:
+  schedule:
+    - cron: '0 6 * * *' # Tous les jours à 6h UTC
+  workflow_dispatch:
+
+jobs:
+  keep-streak:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the repo
+        uses: actions/checkout@v3
+
+      - name: Make a fake contribution
+        run: |
+          echo "🕐 $(date)" >> activity.md
+          git config user.name "JOEL MIANDRA"
+          git config user.email "ton-email@git.io"
+          git add activity.md
+          git commit -m "Daily contribution - $(date)"
+          git push
