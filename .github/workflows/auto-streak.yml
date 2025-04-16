@@ -16,8 +16,8 @@ jobs:
       - name: Make a fake contribution
         run: |
           echo "🕐 $(date)" >> activity.md
-          git config user.name "JOEL MIANDRA"
-          git config user.email "ton-email@git.io"
+          git config user.name "joelmiandra46"
+          git config user.email "jojomiandra@gmail.com"
           git add activity.md
           git commit -m "Daily contribution - $(date)"
           git push
