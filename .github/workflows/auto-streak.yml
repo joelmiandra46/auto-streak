@@ -3,7 +3,7 @@ name: Keep Streak Alive
 on:
   schedule:
    # - cron: "0 * * * *" # Tous les heures
-   - cron: "0 */5 * * *" #tous les 5h
+   - cron: "0 */6 * * *" #tous les 6h
 
   workflow_dispatch:
 
